@@ -14,75 +14,199 @@
       
             <!-- Barra -->
 
-        <nav class="navbar navbar-light bg-light  ">
+        <nav class="navbar navbar-light bg-light d-flex mb-3 ">
 
            <!-- Logo -->
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand me-auto p-2" href="#">
                 <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          Instagram
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" height="40" class="d-inline-block align-top" alt="">
             </a>
             <!-- Nuevo post -->
 
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">New post</button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <button type="button" class="btn btn-success p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">New post</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form>
-                        <div class="form-group">
-                          <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">Caption:</label>
                           <input type="text" class="form-control" id="recipient-name">
                         </div>
-                        <div class="form-group">
-                          <label for="message-text" class="col-form-label">Message:</label>
-                          <textarea class="form-control" id="message-text"></textarea>
-                        </div>
                       </form>
+                      <button type="button" class="btn btn-light btn-sm"><i class="fa-solid fa-camera"></i></button>
+                      <button type="button" class="btn btn-light btn-sm"><i class="fa-solid fa-location-dot"></i></button>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Send message</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Send message</button>
                     </div>
                   </div>
                 </div>
-            </div>
+              </div>
 
             <!-- Configuracion -->
 
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa-solid fa-gear"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            
+            <div class="btn-group p-2">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><button class="dropdown-item" type="button">Profile</button></li>
+                <li><button class="dropdown-item" type="button">Accessibility</button></li>
+                <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+                <li><button class="dropdown-item" type="button"></button></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><button class="dropdown-item" type="button">Log out</button></li>
+              </ul>
             </div>
+
         </nav>
     </div>
 
+    
+
             <!-- Botones -->
 
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <!-- <li class="nav-item py-2 mx-auto "> -->
-        <li class="nav-item py-2">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-square"></i></a>
-        </li>
-        <li class="nav-item py-2">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-table-cells"></i></a>
-        </li>
-    </ul>
+
+  <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+        type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+        class="fa-solid fa-table-cells" ></i></button>
+          
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+        class="fa-solid fa-square"></i></button>
+    </li>
+    <!-- <li class="nav-item py-2 mx-auto "> -->
+
+  </ul>
+
+
     <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">achu</div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">salud</div>
+      
+          <!-- Fotos en grupo -->
+
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="card-group">
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/401" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/402" class="card-img-top" alt="...">
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/403" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/404" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/405" class="card-img-top" alt="...">
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/406" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/407" class="card-img-top" alt="...">
+            </div>
+            <div class="card m-2" style="width: 18rem;">
+              <img src="https://picsum.photos/408" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+
+          <!-- fotos individuales -->
+
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+          <div class="card my-4 mx-auto" style="width: 35rem;">
+            <div class="card-header d-flex justify-content-between bg-white">
+              <h5><i class="fa-solid fa-circle-user"></i> MyUser</h5>
+              <h5>12/14</h5>
+            </div>
+            <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <i class="fa-solid fa-heart"></i> <strong> 297,384 likes</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="card my-4 mx-auto" style="width: 35rem;">
+            <div class="card-header d-flex justify-content-between bg-white">
+              <h5><i class="fa-solid fa-circle-user"></i> MyUser</h5>
+              <h5>12/14</h5>
+            </div>
+            <img src="https://picsum.photos/401" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <i class="fa-solid fa-heart"></i> <strong> 297,384 likes</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="card my-4 mx-auto" style="width: 35rem;">
+            <div class="card-header d-flex justify-content-between bg-white">
+              <h5><i class="fa-solid fa-circle-user"></i> MyUser</h5>
+              <h5>12/14</h5>
+            </div>
+            <img src="https://picsum.photos/402" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <i class="fa-solid fa-heart"></i> <strong> 297,384 likes</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="card my-4 mx-auto" style="width: 35rem;">
+            <div class="card-header d-flex justify-content-between bg-white">
+              <h5><i class="fa-solid fa-circle-user"></i> MyUser</h5>
+              <h5>12/14</h5>
+            </div>
+            <img src="https://picsum.photos/403" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <i class="fa-solid fa-heart"></i> <strong> 297,384 likes</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="card my-4 mx-auto" style="width: 35rem;">
+            <div class="card-header d-flex justify-content-between bg-white">
+              <h5><i class="fa-solid fa-circle-user"></i> MyUser</h5>
+              <h5>12/14</h5>
+            </div>
+            <img src="https://picsum.photos/404" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <i class="fa-solid fa-heart"></i> <strong> 297,384 likes</strong>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+              </p>
+            </div>
+          </div>
+
+        </div>
     </div>
   
 
